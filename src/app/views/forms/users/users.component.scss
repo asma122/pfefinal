@@ -1,0 +1,92 @@
+/* Style du tableau */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style des en-têtes de colonnes */
+.user-table th {
+  background-color: #7d90e6;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Style des cellules */
+.user-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Style des lignes paires */
+.user-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style des lignes impaires au survol */
+.user-table tr:hover {
+  background-color: #ddd;
+}
+
+/* Style du bouton de suppression */
+.delete-button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+/* Changement de couleur au survol */
+.delete-button:hover {
+  background-color: #b71c1c;
+}
+/* Style des boutons d'action */
+.action-buttons {
+  display: flex; /* Utiliser flexbox */
+  gap: 10px; /* Espacement entre les boutons */
+}
+
+/* Style du bouton Supprimer */
+.delete-button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+/* Changement de couleur au survol */
+.delete-button:hover {
+  background-color: #b71c1c;
+}
+
+/* Style du bouton Modifier */
+.edit-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+/* Changement de couleur au survol */
+.edit-button:hover {
+  background-color: #388e3c;
+}
+.container {
+  text-align: center; /* Centrer horizontalement le contenu */
+}
+
+.center-heading {
+  margin-bottom: 20px; /* Ajouter un espace sous le titre */
+}
+
+

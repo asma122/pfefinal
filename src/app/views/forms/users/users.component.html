@@ -1,0 +1,29 @@
+<div class="container">
+  <h1 style="text-align:center; color: black;">VERMEG</h1>
+  <h2>la liste des utilisateurs</h2>
+  <button class="send-email-button" (click)="sendEmailToAllUsers('Nom du projet')">Affectation!</button>
+  <br>
+  <br>
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Full Name</th>
+        <th>Role</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.emailId }}</td>
+        <td>{{ user.fullname }}</td>
+        <td>{{ user.role }}</td>
+        <td>
+          <div class="action-buttons">
+            <button class="delete-button" (click)="deleteUser(user.id)">Supprimer</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

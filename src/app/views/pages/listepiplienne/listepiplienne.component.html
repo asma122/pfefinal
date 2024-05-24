@@ -1,0 +1,44 @@
+<div>
+    <h2>Status Pipelines Created by Stages</h2>
+    <div class="search-employee">
+        <input type="search" class="form-control" placeholder="Filter pipelines">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+    </div>
+    <br>
+    <button class="run-pipeline-btn blue-button" (click)="submit()">Run Pipeline</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Status</th>
+                <th>Pipelines</th>
+                <th>Stages</th>
+                <th class="created-by">Created By</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of items">
+                <td>
+                    <i *ngIf="item.status === 'warning'" class="fa fa-exclamation-triangle" style="color: orange;"></i>
+                    <i *ngIf="item.status === 'passed'" class="fa fa-check-circle" style="color: green;"></i>
+                    {{ item.status }}
+                </td>
+                <td>
+                    <span class="blue-text">{{ item.pipelines }}</span>
+                </td>                
+                <td>
+                    <span *ngFor="let stage of item.stages.split(',')">
+                        <i *ngIf="stage.trim() === 'passed'" class="fa fa-check-circle" style="color: green;"></i>
+                        <i *ngIf="stage.trim() === 'failed'" class="fa fa-times-circle" style="color: red;"></i>
+                        {{ stage.trim() }}
+                    </span>
+                    <i class="fa fa-print" (click)="printItem(item)"></i>
+                </td>
+                <td class="created-by">{{ item.createdBy }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="blue-button" (click)="addItem()">Add Row</button>
+    <button class="blue-button" (click)="submit()">Submit</button>
+</div>

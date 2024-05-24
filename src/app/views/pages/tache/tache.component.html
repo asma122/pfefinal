@@ -1,0 +1,66 @@
+<nav class="navbar sticky-top navbar-dark bg-custom h-100">
+    <div class="container-fluid">
+        <a class="navbar-brand mx-auto" routerLink="/ff">
+            <span class="vermeg-text">VERMEG</span> 
+        </a>
+    </div>
+</nav>
+<br>
+  <div style="text-align: center;">
+    <h2>Suivie Des Projets</h2>
+  </div>
+<br>
+<br>
+<table>
+    <thead>
+        <tr>
+            <th>Id du projet</th>
+            <th>Tâche à réaliser</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let  items of  taches">
+            <td>
+                {{ items.id}}
+                <input type="text" #projectNameRef placeholder="id du projet" value="{{items .id }}">
+            </td>
+            <td>
+                {{  items.task }}
+                <input type="checkbox" #taskCompletedRef [checked]="items.task === 'Completed'">
+                <input type="text" #taskRef style="width: 1000px;" placeholder="Entrez la tâche à réaliser..." value="{{ items.task }}">
+
+
+            </td>
+            <td>
+                <!-- <div>
+                    <button class="btn btn-green btn-small" (click)="updateStatus('Terminé', items.id)">Terminé</button>
+                    <button class="btn btn-red btn-small" (click)="updateStatus('En cours', items.id)">En Cours</button>
+                </div> -->
+                <!-- <p>{{ items.status }}</p> -->
+            </td>  
+        </tr>
+    </tbody>
+</table>
+
+<div class="col-auto text-left">
+    <button (click)="createTache()" class="btn btn-primary custom-green-button" style="color: black; font-weight: bold;">Submit</button></div>
+<!-- <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form (submit)="createTask(newTaskName, newTaskId)">
+                <div class="form-group">
+                    <label for="newTaskName">Nom de la tâche:</label>
+                    <input type="text" class="form-control" id="newTaskName" [(ngModel)]="newTaskName" name="newTaskName" required>
+                </div>
+                <div class="form-group">
+                    <label for="newTaskId">ID de la tâche:</label>
+                    <input type="text" class="form-control" id="newTaskId" [(ngModel)]="newTaskId" name="newTaskId" required>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary custom-green-button" style="color: black; font-weight: bold;">Ajouter une tâche</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->

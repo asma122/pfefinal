@@ -1,0 +1,72 @@
+.table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th {
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  border: 2px solid black;
+  padding: 8px;
+}
+
+.table td {
+  text-align: center;
+  border: 2px solid black;
+  padding: 8px;
+}
+
+.table tr {
+  border-bottom: 1px solid black; /* Ajout d'une bordure basse pour chaque ligne */
+}
+
+.sub-table {
+  display: table;
+  width: 100%;
+}
+
+.sub-table-row {
+  display: table-row;
+}
+
+.sub-table-cell {
+  display: table-cell;
+  padding: 5px;
+  border-right: 1px solid black; /* Ajout de la bordure droite */
+}
+
+.sub-table-row .sub-table-cell:last-child {
+  border-right: none; /* Suppression de la bordure droite pour la dernière cellule de chaque rangée */
+}
+
+.application-header,.application-column {
+  background-color: #007bff; /* Couleur de fond pour les en-têtes et les colonnes de "Application" */
+  color: white; /* Couleur du texte */
+}
+
+.pipeline-header, .pipeline-column {
+  background-color: #007bff; /* Couleur de fond pour les en-têtes et les colonnes de "Pipeline" */
+  color: white; /* Couleur du texte */
+}
+
+.sonar-header, .sonar-column {
+  background-color: #007bff; /* Couleur de fond pour les en-têtes et les colonnes de "Sonar" */
+  color: white; /* Couleur du texte */
+}
+
+.nexus-header, .nexus-column {
+  background-color: #007bff; /* Couleur de fond pour les en-têtes et les colonnes de "NexusIq" */
+  color: white; /* Couleur du texte */
+}
+
+.fortify-header, .fortify-column {
+  background-color: #007bff; /* Couleur de fond pour les en-têtes et les colonnes de "Fortify" */
+  color: white; /* Couleur du texte */
+}
+.branche-header,.branche-column{
+  background-color: #007bff; /* Couleur de fond pour les en-têtes et les colonnes de "Fortify" */
+  color: white; /* Couleur du texte */
+} 
+

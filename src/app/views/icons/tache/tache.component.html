@@ -1,0 +1,40 @@
+<div class="container">
+    <h1 style="text-align:center; color: black;">VERMEG</h1>
+    <h2>Formulaire pour gérer les tâches liées à chaque Projet</h2>
+    <form [formGroup]="taskForm" (ngSubmit)="createTache()">
+        <div class="form-group">
+            <label for="Nomprojet">Nom Projet</label>
+            <input type="text" id="Nomprojet" list="projectList" name="nomProjet" class="form-control" formControlName="nomProjet" placeholder="Nom Projet">
+            <datalist id="projectList">
+                <option value="Projet Palmera">
+                <option value="Projet fluide">
+            </datalist>
+        </div>
+        <div class="form-group">
+            <label for="tache">Tache:</label>
+            <input type="text" id="tache" name="tache" formControlName="tache" placeholder="Tache">
+        </div>
+        <button type="submit" [disabled]="taskForm.invalid">Submit</button>
+    </form>    
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom Projet</th>
+                <th>Tache</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let task of tasks">
+                <td>{{ task.  Nomprojet }}</td>
+                <td>{{ task.tache }}</td>
+                <td>
+                    <button class="button inProgress" (click)="supprimerTache(task)">Supprimer</button>  
+                    <button class="button completed" (click)="editerTache(task)">Editer</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,105 @@
+.table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th {
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px; /* Augmente le rembourrage pour une meilleure apparence */
+  border: 1px solid #007bff; /* Ajoute une bordure autour des en-têtes */
+}
+
+.table td {
+  text-align: center;
+  padding: 10px; /* Augmente le rembourrage pour une meilleure apparence */
+  border: 1px solid #007bff; /* Ajoute une bordure autour des cellules */
+}
+
+/* Style pour la première ligne */
+.table tr:first-child th {
+  border-top: none; /* Supprime la bordure supérieure de la première ligne */
+}
+
+/* Style pour la dernière ligne */
+.table tr:last-child td {
+  border-bottom: none; /* Supprime la bordure inférieure de la dernière ligne */
+}
+
+/* Style pour la dernière colonne */
+.table tr td:last-child {
+  border-right: none; /* Supprime la bordure droite de la dernière colonne */
+}
+
+/* Style pour la colonne "Created By" */
+.table th:nth-last-child(2),
+.table td:nth-last-child(2) {
+  border-right: 1px solid #007bff; /* Ajoute une bordure à droite */
+}
+
+.search-employee {
+  position: relative;
+  display: inline-block;
+}
+
+.search-employee input[type="search"] {
+  padding-right: 30px; /* Ajoute de l'espace à droite pour l'icône */
+}
+
+.search-employee .search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Ajuste la position de l'icône à droite */
+  transform: translateY(-50%);
+  cursor: pointer; /* Définir un curseur pour indiquer que c'est cliquable */
+}
+
+/* Styles pour l'icône */
+.search-employee .search-icon i {
+  font-size: 18px;
+  color: #555;
+}
+
+td {
+  position: relative;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.circle-icon {
+  border: 2px solid #000; /* exemple de couleur de bordure noire */
+  border-radius: 50%; /* pour obtenir une forme de cercle */
+  padding: 5px; /* ajustez selon vos besoins */
+}
+
+.blue-text {
+  color: blue;
+}
+/* Ajoute une bordure à droite pour la colonne "Created By" */
+.created-by {
+  border-right: 1px solid #007bff;
+}
+.blue-button {
+  background-color: #007bff;
+  color: white;
+}
+h2 {
+  text-align: center;
+}
+.search-employee {
+  display: flex;
+  justify-content: flex-end; /* Place les éléments à droite */
+}
+
+.search-employee input[type="search"] {
+  margin-left: auto; /* Déplace l'élément input à droite */
+}
+
+
+

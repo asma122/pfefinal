@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Add your custom CSS styles here */
+    .container {
+      max-width: 60%;
+      margin-top: 10px;
+    }
+    
+
+    .col-md-6 {
+      padding: 0;
+    }
+    h2 {
+      position: absolute;
+      color: white;
+      margin-bottom: 600px;
+      margin-right: 1250px;
+    }
+   
+  </style>
+</head>
+
+<body>
+  <div class="bg-grey min-vh-100 d-flex flex-column align-items-center justify-content-center p-4">
+    <h2 >VERMEG</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" >
+          <div class="bg-white p-4 rounded mb-4 "style="height: 101.5%;">
+            <h1> Créez votre compte</h1>
+            <p class="text-medium-emphasis">Créez votre compte personnel</p>
+            <form #Registerfrom="ngForm" (ngSubmit)="Registerform()">
+              <small [class.text-danger]="msg.status==500">{{ msg.message }}</small>
+              <div class="input-group mb-3">
+                <span class="input-group-text">
+                  <svg cIcon name="cilUser"></svg>
+                </span>
+                <input type="email" class="form-control" id="email" placeholder="Entrez votre adresse e-mail" name="email" [(ngModel)]="user.emailId" required #email="ngModel" [class.is-invalid]="email.invalid && email.touched "pattern="[a-zA-Z0-9._%+-]+@gmail\.com">
+              </div>
+              <div class="mb-3">
+                <small class="text-danger" *ngIf="email.touched && email.invalid && email.hasError('required') ">Email est un champ obligatoire</small> 
+                <small class="text-danger" *ngIf="email.invalid && email.touched && email.hasError('pattern')">Veuillez saisir une adresse Gmail valide (exemple&#64;gmail.com) </small>
+
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">
+                  <svg cIcon name="cilUser"></svg>
+                </span>
+                <input type="fullname" class="form-control" id="fullname" placeholder="Entrez votre nom complet" name="fullname" [(ngModel)]="user.fullname" required #fullname="ngModel" [class.is-invalid]="fullname.invalid && fullname.touched">
+              </div>
+              <div class="mb-3">
+                <small class="text-danger" [class.d-none]="fullname.valid || fullname.untouched">Le nom complet est un champ obligatoire.</small>
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text">
+                  <svg cIcon name="cilLockLocked"></svg>
+                </span>
+                <input type="password" class="form-control" id="pwd" placeholder="Entrez votre mot de passe" name="pwd" [(ngModel)]="user.password" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched">
+              </div>
+              <div class="mb-3">
+                <small class="text-danger" [class.d-none]="password.valid || password.untouched">Le mot de passe est un champ obligatoire</small>
+              </div>
+
+              
+              <div class="input-group mb-3">
+                <span class="input-group-text">
+                  <svg cIcon name="cilLockLocked"></svg>
+                </span>
+                <input type="password" class="form-control" id="cpwd" placeholder="Confirmez votre mot de passe" name="cpwd" [(ngModel)]="user.confirmPassword" required #confirmPassword="ngModel" [class.is-invalid]="confirmPassword.invalid && confirmPassword.touched">
+              </div>
+              <div class="mb-3">
+                <small class="text-danger" [class.d-none]="confirmPassword.value === password.value || confirmPassword.untouched">Les mots de passe ne correspondent pas.</small>
+              </div>
+              <br><br>
+              <button type="submit" class="btn btn-primary">Inscription</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="bg-light-pink p-4 rounded merge-section  d-flex flex-column justify-content-center align-items-center" style="height: 101.5%; ">
+            <p style="font-size: 40px; margin-bottom: 70px;">Inscription</p>
+            <p style="font-size: 20px; margin-bottom: 60px;">Rejoignez-nous maintenant ! S'inscrire est simple et rapide. Il vous suffit de fournir vos détails, et vous êtes prêt. N'attendez pas, commencez dès aujourd'hui à explorer notre plateforme !</p>
+            <small class="float-right btesxtual" (click)="gotologin()">Utilisateur existant ? Connectez-vous ici</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+

@@ -1,0 +1,128 @@
+/* scan-input.component.css */
+.scan-input .input-container {
+  margin: 30px;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 400px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.scan-input .label-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.scan-input .input-container label {
+  font-weight: bold;
+}
+
+.scan-input .input-container input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.scan-input .info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.scan-input .info-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.scan-input .info-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.scan-input .info-text {
+  background-color: #f0f0f0;
+  padding: 5px;
+  border-radius: 3px;
+  flex-grow: 1;
+}
+
+.scan-input .button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.scan-input .info-button {
+  padding: 1px 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.scan-input .info-button:last-child {
+  margin-right: 0;
+}
+
+.scan-input .info-button:hover {
+  background-color: #0056b3;
+}
+
+.scan-input .error-message {
+  color: red;
+  margin-top: 10px;
+}
+.scan-input .input-container label {
+  font-weight: bold;
+  text-align: center; /* Ajout de l'alignement du texte au centre */
+}
+.scan-input .link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espace entre les liens */
+}
+
+.scan-input .link-container a {
+  display: block;
+  text-decoration: none; /* Supprime le soulignement des liens */
+  color: blue; /* Couleur des liens, ajustez selon vos besoins */
+  padding: 5px; /* Ajoute un peu de padding autour des liens */
+  border: 1px solid #ccc; /* Ajoute une bordure autour des liens */
+  border-radius: 5px; /* Ajoute des coins arrondis aux bordures */
+  text-align: center; /* Centre le texte dans les liens */
+}
+
+.scan-input .link-container a:hover {
+  background-color: #f0f0f0; /* Change la couleur de fond au survol */
+}
+.scan-input .button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligne le bouton à droite */
+}
+
+.scan-input .button-container .consult-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: red; /* Couleur de fond rouge */
+  color: white; /* Couleur du texte blanche */
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.scan-input .button-container .consult-button:hover {
+  background-color: darkred; /* Change la couleur de fond au survol */
+}
+
+
+

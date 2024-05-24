@@ -1,0 +1,153 @@
+/* scan-input.component.css */
+.input-container {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    box-sizing: border-box;
+    background-color: white; /* Ajout de la couleur de fond */
+  }
+  
+  .label-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement */
+    height: 50px;            /* Ajustez la hauteur selon vos besoins */
+    margin-bottom: 10px;
+  }
+  
+  .input-container label {
+    font-weight: bold;
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .info-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espace entre les éléments */
+    margin-bottom: 5px;
+  }
+  
+  .info-label {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .info-text {
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 3px;
+    flex-grow: 1; /* Remplit l'espace disponible */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end; /* Alignement à droite */
+    width: 100%; /* Pour occuper toute la largeur */
+  }
+  
+  .info-button {
+    padding: 1px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px; /* Ajoute de l'espace entre les boutons */
+  }
+  
+  .info-button:last-child {
+    margin-right: 0; /* Supprime la marge du dernier bouton */
+  }
+  
+  .info-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+  .scans-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Optionnel: Ajoute un espacement entre les blocs */
+  }
+  
+  .input-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    flex: 0 1 calc(33.333% - 10px); /* Ajuste la largeur des blocs */
+    box-sizing: border-box;
+  }
+  
+  .label-container,
+  .info-container {
+    margin-bottom: 10px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .info-label {
+    margin-right: 5px;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 5px; /* Optionnel: Ajoute un espacement entre les boutons */
+  }
+  .scans-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Ajoute un espacement entre les blocs */
+  }
+  
+  .input-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    flex: 0 1 calc(33.333% - 20px); /* Ajuste la largeur des blocs pour occuper un tiers du conteneur */
+    box-sizing: border-box;
+  }
+  
+  .label-container,
+  .info-container {
+    margin-bottom: 10px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .info-label {
+    margin-right: 5px;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 5px; /* Ajoute un espacement entre les boutons */
+  }
+  
+  
+  

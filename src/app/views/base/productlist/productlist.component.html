@@ -1,0 +1,44 @@
+<br>
+<br>
+<br>
+<br>
+<div class="form-card" style="margin-top: -110px;">
+    <h1 style="text-align:center; color: black;">VERMEG</h1>
+    <h1 style="text-align:center; color: #00008B;">Formulaire  administrative</h1>
+    <form [formGroup]="produitForm"(ngSubmit)=" createProduit()">
+        <label for="aff_membre_produit">Add Product</label>
+        <div class="form-group">
+            <div class="d-inline">
+                <label for="productName" class="d-inline">Nom Produit:</label>
+                <input type="text" id="productName" name="productName" class="form-control d-inline larger-input" formControlName="name" placeholder="Enter product name">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-auto text-left">
+                <button type="submit" class="btn btn-primary custom-green-button" style="color: black; font-weight: bold;">Submit</button>
+            </div>
+            <div class="col-auto text-right">
+                <button routerLink="/produit" type="button" class="btn btn-secondary custom-green-button" style="color: black; font-weight: bold;">Cancel</button>
+            </div>
+        </div>
+    </form>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let produit of produits">
+                <td>{{ produit.name }}</td>
+                <td>
+                    <button (click)="deleteProduit(produit.id)" class="btn btn-danger">Supprimer</button>
+                    <button (click)="editProduit(produit.id)" class="btn btn-warning">Modifier</button> 
+                </td> 
+            </tr>
+        </tbody>
+    </table>
+</div>

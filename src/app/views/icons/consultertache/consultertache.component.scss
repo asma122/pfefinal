@@ -1,0 +1,23 @@
+.table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: 15px;
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+}
+
+.table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.blue-header {
+  background-color: #f0f8ff; /* Choisir votre couleur de fond */
+  color: #333; /* Choisir votre couleur de texte */
+}

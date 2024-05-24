@@ -1,0 +1,67 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Branch</th>
+      <th class="application-header">Application</th>
+      <th class="pipeline-header">Pipeline</th>
+      <th class="sonar-header">Sonar</th>
+      <th class="nexus-header">NexusIq</th>
+      <th class="fortify-header">Fortify</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <td class="branche-column">
+        <div class="sub-table">
+          <div class="sub-table-row">
+            <div class="sub-table-cell">Name{{ item. branch.name }}</div>
+          </div>
+        </div>
+      </td>
+      <td class="application-column">
+        <div class="sub-table">
+          <div class="sub-table-row">
+            <div class="sub-table-cell">Name {{ item.application.name }}</div>
+            <div class="sub-table-cell">Status{{ item.application.status }}</div>
+          </div>
+        </div>
+      </td>
+      <td class="pipeline-column">
+        <div class="sub-table">
+          <div class="sub-table-row">
+            <div class="sub-table-cell">Id {{ item.pipeline.id }}</div>
+            <div class="sub-table-cell">Status {{ item.pipeline.status }}</div>
+            <div class="sub-table-cell">Info {{ item.pipeline.Info }}</div>
+          </div>
+        </div>
+      </td>
+      <td class="sonar-column">
+        <div class="sub-table">
+          <div class="sub-table-row">
+            <div class="sub-table-cell">Blocker {{ item.sonar.blocker }}</div>
+            <div class="sub-table-cell">Critical {{ item.sonar.critical }}</div>
+            <div class="sub-table-cell">High {{ item.sonar.high }}</div>
+          </div>
+        </div>
+      </td>
+      <td class="nexus-column">
+        <div class="sub-table">
+          <div class="sub-table-row">
+            <div class="sub-table-cell">Blocker {{ item.NexusIq.blocker }}</div>
+            <div class="sub-table-cell">Critical {{ item.NexusIq.critical }}</div>
+            <div class="sub-table-cell">High {{ item.NexusIq.high }}</div>
+          </div>
+        </div>
+      </td>
+      <td class="fortify-column">
+        <div class="sub-table">
+          <div class="sub-table-row">
+            <div class="sub-table-cell">Blocker {{ item.Fortify.blocker }}</div>
+            <div class="sub-table-cell">Critical {{ item.Fortify.critical }}</div>
+            <div class="sub-table-cell">High {{ item.Fortify.high }}</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

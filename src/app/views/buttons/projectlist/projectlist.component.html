@@ -1,0 +1,84 @@
+<br>
+<br>
+<br>
+<br>
+<div class="form-card" style="margin-top: -110px;">
+    <h1 style="text-align:center; color: black;">VERMEG</h1>
+    <h1 style="text-align:center; color: #00008B;">Formulaire Administrative</h1>
+    <form [formGroup]="projectForm"(ngSubmit)="createProject()">
+      <label for="aff_membre_produit">Add Project:</label>
+      <br>
+      <div class="form-group">
+        <div class="d-inline">
+            <label for="nomproduit">Nom Produit:</label>
+            <input type="text" id="nomproduit" name="nomproduit" class="form-control d-inline larger-input" formControlName="nomProduit" list="produitList" placeholder="Saisissez ou sélectionnez un produit">
+            <datalist id="produitList">
+                <option value="Produit 1">
+                <option value="Produit 2">
+                <option value="Produit fluide">
+
+            </datalist>
+        </div>
+        
+      </div>
+      <div class="form-group">
+          <div class="d-inline">
+              <label for="name" class="d-inline">Nom Projet:</label>
+              <input type="text" id="name" name="name" class="form-control d-inline larger-input" formControlName="name" placeholder="Enter Project name">
+          </div>
+      </div>
+      <div class="form-group">
+          <div class="d-inline">
+              <label for="branche" class="d-inline">Branche:</label>
+              <input type="text" id="branche" name="branche" class="form-control d-inline larger-input" formControlName="branche" placeholder="Enter Branche">
+          </div>
+      </div>
+      <div class="form-group">
+          <div class="d-inline">
+              <label for="datedebut" class="d-inline">Date Debut:</label>
+              <input type="text" id="datedebut" name="datedebut" class="form-control d-inline larger-input" formControlName="datedebut" placeholder="dd/MM/yyyy">
+          </div>
+      </div>
+      <div class="form-group">
+          <div class="d-inline">
+              <label for="datefin" class="d-inline">Date Fin:</label>
+              <input type="text" id="datefin" name="datefin" class="form-control d-inline larger-input" formControlName="datefin" placeholder="yyyy/MM/dd">
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-auto text-left">
+              <button type="submit" class="btn btn-primary custom-green-button" style="color: black; font-weight: bold;">Submit</button>
+          </div>
+          <div class="col-auto text-right">
+              <button routerLink="/produit" type="button" class="btn btn-secondary custom-green-button" style="color: black; font-weight: bold;">Cancel</button>
+          </div>
+      </div>
+  </form>
+  <br>
+  <table class="table">
+    <thead>
+        <tr>
+            <th>Nom Produit</th>
+            <th>Nom Projet</th>
+            <th>Branche</th>
+            <th>Date Début</th>
+            <th>Date Fin</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let project of projects">
+            <td>{{ project.nomProduit }}</td>
+            <td>{{ project.name }}</td>
+            <td>{{ project.branche }}</td>
+            <td>{{ project.datedebut }}</td>
+            <td>{{ project.datefin  }}</td>
+            <td>
+                <button (click)="deleteProject(project.nomProduit)" class="btn btn-danger">Supprimer</button>
+                <button (click)="editProject(project)" class="btn btn-warning">Modifier</button>       
+             </td>
+        </tr>
+    </tbody>
+</table>
+</div>

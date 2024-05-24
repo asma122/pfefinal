@@ -1,0 +1,30 @@
+<div class="scans-container">
+  <div *ngFor="let scan of scans" class="input-container">
+    <div class="label-container">
+      <label>{{ scan.name }}</label>
+    </div>
+    <div class="info-container">
+      <div class="info-item">
+        <label class="info-label">Blocker:</label>
+        <span *ngIf="!scan.editing">{{ scan.blocker }}</span>
+        <input *ngIf="scan.editing" [(ngModel)]="scan.blocker" />
+      </div>
+      <div class="info-item">
+        <label class="info-label">Critical:</label>
+        <span *ngIf="!scan.editing">{{ scan.critical }}</span>
+        <input *ngIf="scan.editing" [(ngModel)]="scan.critical" />
+      </div>
+      <div class="info-item">
+        <label class="info-label">High:</label>
+        <span *ngIf="!scan.editing">{{ scan.high }}</span>
+        <input *ngIf="scan.editing" [(ngModel)]="scan.high" />
+      </div>
+      <div class="button-container">
+        <button class="info-button" (click)="reloadPage()">Rafraichir</button>
+        <button class="info-button" (click)="deleteScan(scan.id)">Supprimer</button>
+        <button class="info-button" (click)="editScan(scan)">{{ scan.editing ? 'Sauvegarder' : 'Modifier' }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+

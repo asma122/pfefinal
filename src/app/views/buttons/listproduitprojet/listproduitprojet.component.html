@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nom Produit</th>
+            <th>Nom Projet</th>
+            <th>Branche</th>
+            <th>Date Début</th>
+            <th>Date Fin</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let project of projects">
+            <td>{{ project.nomProduit }}</td>
+            <td>{{ project.name }}</td>
+            <td>{{ project.branche }}</td>
+            <td>{{ project.datedebut }}</td>
+            <td>{{ project.datefin }}</td>
+        </tr>
+    </tbody>
+</table>

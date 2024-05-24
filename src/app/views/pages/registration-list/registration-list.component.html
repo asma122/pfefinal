@@ -1,0 +1,43 @@
+<!-- <nav class="navbar sticky-top navbar-dark bg-dark h-100">
+  <div class="container-fluid">
+    <a class="navbar-brand mx-auto" routerLink="/ff">VERMEG Platform</a>
+  </div>
+</nav> 
+<br>
+<div style="text-align: center;">
+  <h2>Liste des Projets</h2>
+</div>
+  <div class="Toolbar">
+        <br>
+        <div class="search-employee">
+          <input type="search" class="form-control" placeholder="Search here ">
+        </div>
+      </div>
+      <br>
+      <br>
+      <div>
+      
+        <table>
+          <thead>
+            <tr>
+              <th>Id </th>
+              <th>Id Produit</th>
+              <th>Nom Projet</th>
+              <th>Branche</th>
+              <th>Date Debut</th>
+              <th>Date Fin</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let project of projects">
+              <td>{{ project.id }}</td>
+              <td>{{ project.name }}</td>
+              <td>{{ project.branche }}</td>
+              <td>{{ project.datedebut | date:'dd/MM/yyyy' }}</td>
+              <td>{{ project.datefin | date:'dd/MM/yyyy' }}</td>
+              <td>{{ project.idproduit }}</td> 
+            </tr>
+          </tbody>
+        </table>
+      </div>
+       -->

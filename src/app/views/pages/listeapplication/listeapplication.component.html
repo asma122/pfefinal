@@ -1,0 +1,52 @@
+<div>
+    <h2>Status Application</h2>
+    <div class="search-employee">
+        <input type="search" class="form-control" placeholder="Filter application">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+    </div>
+    <br>
+    <button class="run-pipeline-btn blue-button" (click)="submit()">Run Application</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Namespace</th>
+                <th>Application name</th>
+                <th>Etat de sante</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of colonne">  
+                <td>
+                    <span class="blue-text">{{ item. Namespace}}</span>
+                </td>
+                <td>
+                    <span class="blue-text">{{ item. Applicationname}}</span>
+                </td>
+                <td>
+                    <div *ngFor="let item of colonne; let i = index">
+                        <input
+                          type="checkbox"
+                          [checked]="item.selected"
+                          (change)="onSelect(i)"
+                        />
+                        <label class="blue-text">
+                          {{ item.Etatdesante }}
+                        </label>
+                        <br />
+                        <!-- Afficher les détails supplémentaires uniquement si cette ligne est sélectionnée -->
+                        <div *ngIf="item.selected">
+                          <label>Namespace: {{ item.Namespace }}</label>
+                          <br />
+                          <label>Application Name: {{ item.Applicationname }}</label>
+                        </div>
+                      </div>
+                    <span class="blue-text">{{ item.Etatdesante }}</span>
+                </td>  
+            </tr>
+        </tbody>
+    </table>
+    <button class="blue-button" (click)="addItem()">Add Row</button>
+    <button class="blue-button" (click)="submit()">Submit</button>
+</div>
